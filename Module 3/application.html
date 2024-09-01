@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <!-- Adding the VueJs 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>The total requests raised {{global_count}}</h1>
+        <table>
+            <tr>
+                <td>
+                    <!-- <h3>Thej Board</h3> -->
+                    <message-board title="Thej Board" v-on:add-to-global-count="count_global"></message-board>
+                </td>
+                <td>
+                    <!-- <h3>Fatima Board</h3> -->
+                    <message-board title="Fatima Board" v-on:add-to-global-count="count_global"></message-board>
+                </td>
+                <td>
+                    <!-- <h3>Cookie board</h3> -->
+                    <message-board title="Ruth Board" v-on:add-to-global-count="count_global"></message-board>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- Adding the application.js -->
+    <script type="text/javascript" src="application.js"></script>
+</body>
+</html>
