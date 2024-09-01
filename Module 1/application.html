@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <!-- Adding the VueJs 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <p v-if="count == 0">No replies yet</p>
+        <p v-else-if="count > 5"> You are very popular </p>
+        <p v-else>No. of replies: {{ count }}</p>
+
+        Your Name: <input type="text" v-model="visitor_name"><br><br>
+        <button v-on:click="sayHi">Say Hi</button>
+        
+        <ul>
+            <li v-for="name in visitors">
+                {{ name }}
+            </li>
+        </ul>
+    </div>
+    <!-- Adding the application.js -->
+    <script type="text/javascript" src="application.js"></script>
+</body>
+</html>
