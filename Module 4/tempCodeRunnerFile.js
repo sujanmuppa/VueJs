@@ -1,0 +1,1 @@
+wish.then((v) => console.log(v));   
